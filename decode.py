@@ -1,5 +1,6 @@
+API_KEY = ""
 import google.generativeai as genai
-genai.configure(api_key='AIzaSyCqfFtifTqd-L3t9lSGMVY6GT46fSfiVZo')
+genai.configure(API_KEY)
 
 
 def decode(ciphertext) -> str:
