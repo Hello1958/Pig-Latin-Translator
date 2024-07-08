@@ -1,7 +1,9 @@
-API_KEY = ""
-import google.generativeai as genai
-genai.configure(API_KEY)
+import os
 
+import google.generativeai as genai
+
+API_KEY = ""
+genai.configure(api_key=os.environ[API_KEY])
 
 def decode(ciphertext) -> str:
     generation_config = {
