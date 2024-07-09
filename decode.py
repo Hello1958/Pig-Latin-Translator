@@ -1,5 +1,5 @@
 import os
-
+from google.generativeai.types import HarmCategory, HarmBlockThreshold
 import google.generativeai as genai
 
 API_KEY = ""
@@ -26,6 +26,13 @@ def decode(ciphertext) -> str:
         ]
     )
 
-    response = chat_session.send_message(f"You are a Pig Latin translator. You have been tasked with translating this piece of text '{ciphertext}' into readable English.")
+    response = chat_session.send_message([f"You are a Pig Latin translator. You have been tasked with translating this piece of text '{ciphertext}' into readable English."],
+                                         safety_settings={
+                                             HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_ONLY_HIGH,
+                                             HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_ONLY_HIGH,
+                                             HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_ONLY_HIGH,
+                                             HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_ONLY_HIGH,
+                                             HarmCategory.HARM_CATEGORY_UNSPECIFIED: HarmBlockThreshold.BLOCK_ONLY_HIGH
+                                         })
 
     return response.text
