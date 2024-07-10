@@ -7,7 +7,7 @@ if __name__ == "__main__":
         if dENcoder == '1':
             print("\n", encode_sentence(input('> ')))
         elif dENcoder == '2':
-            print('\n', decode(input('> ')))
+            print("\n", decode(input('> ')))
         else:
             print("Please enter a valid choice.")
             continue
