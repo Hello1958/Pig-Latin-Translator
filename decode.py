@@ -5,6 +5,10 @@ $ pip install google-generativeai
 
 See the getting started guide for more information:
 https://ai.google.dev/gemini-api/docs/get-started/python
+
+Get your Google AI API key here:
+https://aistudio.google.com/app/apikey
+Use your Google account to sign in for the key. (It's free ;) )
 """
 
 import os
