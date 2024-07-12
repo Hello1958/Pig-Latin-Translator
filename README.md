@@ -1,3 +1,1 @@
-Pig Latin Translator:
-
-This is a Pig Latin translator (obviously). To use the decode function on this translator, you will need a Google AI API key. You can get one here: https://aistudio.google.com/app/apikey with your Google account. To use this API key, go into the decode.py module and paste in your API key. The API key is supposed to be fed in as a string. Do not remove the quotation marks.
+This is a Pig Latin translator. To get started, navigate to the decode module (aptly named decode.py). From lines 1 to 11 you will see guidlines on how to use the google generative ai library and how to get your Google AI API key. To use this key, go to line 18 (where it says os.environ["API_KEY"] = "") and paste in your key within the parentheses. (There are definetely better ways to do this, but I don't care.) Once you have this set up, navigate to the file named Pig Latin Translator.py and run it. You should be able to access the translator through this.
