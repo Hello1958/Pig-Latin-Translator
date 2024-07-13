@@ -12,6 +12,7 @@ Method 1 uses environment variables and the os module to access Google AI. This 
 
 ### Method 2: Hardcoding the Variable
 This method is arguably easier but probably less secure compared to method 1. In decode.py, go to line 20 and replace "os.environ["API_KEY"]" with your API key. Remember to put your key in as a string; that is, surrounded by quotes. Then, you can remove line 14 and line 18.
+![Screenshot 2024-07-13 132313](https://github.com/user-attachments/assets/d0183731-5c5b-4b9e-ac7c-5d46b83f11ff)
 
 ## Running the Translator
 Navigate to the file named Pig Latin Translator.py and run it. Now, you should be good to go!
